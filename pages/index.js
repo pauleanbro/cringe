@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import useImage from 'use-image';
 
 import { signIn, signOut, useSession, } from 'next-auth/client';
@@ -39,12 +39,8 @@ export default function Home() {
           setUsername(res.username);
         }
       )
-
-
     }
   }, [session]);
-
-
 
   return (
     <div>
@@ -111,7 +107,6 @@ export default function Home() {
           </Layer>
         </Stage>
       }
-
     </div>
   )
 }
